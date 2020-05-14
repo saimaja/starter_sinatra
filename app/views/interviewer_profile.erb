@@ -1,0 +1,18 @@
+<h1><%=%"#{@interviewer.name}'s"%> Profile </h1>
+
+<p>Name: <%=@interviewer.name%></p>
+<p>Title: <%=@interviewer.title%></p>
+
+
+<br>
+<form action="/applicants/<%=@interviewer.id%>" method="POST">
+<input id="hidden" type="hidden" name="_method" value="DELETE">
+
+<input type="submit" value="Delete">
+</form>
+<br>
+<a href="/interviewers/<%=@interviewer.id%>/edit">Edit</a>
+<br>
+<a href='/interviewers'>Return to Interviewers</a>
+<br>
+<a href='/'>Return Home</a>

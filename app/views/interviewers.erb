@@ -1,0 +1,9 @@
+<ul><% @interviewers.each do |interviewer|%>
+<li><a href="/interviewers/<%=interviewer.id%>"><%= interviewer.name%></a></li>
+<%end%>
+</ul>
+
+<a href="/interviewers/new">Create New Interviewer</a>
+<br>
+<a href='/'>Return Home</a>
+

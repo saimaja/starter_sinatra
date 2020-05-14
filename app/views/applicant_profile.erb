@@ -1,2 +1,18 @@
-<h1>"#{@applicant.name}'s" Profile </h1>
+<h1><%=%"#{@applicant.name}'s"%> Profile </h1>
 
+<p>Name: <%=@applicant.name%></p>
+<p>Resume: <%=@applicant.resume%></p>
+
+
+<br>
+<form action="/applicants/<%=@applicant.id%>" method="POST">
+<input id="hidden" type="hidden" name="_method" value="DELETE">
+
+<input type="submit" value="Delete">
+</form>
+<br>
+<a href="/applicants/<%=@applicant.id%>/edit">Edit</a>
+<br>
+<a href='/applicants'>Return to Applicants</a>
+<br>
+<a href='/'>Return Home</a>

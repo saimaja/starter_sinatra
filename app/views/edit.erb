@@ -1,0 +1,8 @@
+<form action="/applicants/<%= @applicant.id %>" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+    <label for="name">Name:</label>
+    <input id="name" type='text' name="name" value="<%= @applicant.name %>">
+    <label for="resume">Resume:</label>
+    <input id="resume" type='textarea' name="resume" value="<%= @applicant.resume %>">
+    <input type='submit' value="Update Information">
+</form>
