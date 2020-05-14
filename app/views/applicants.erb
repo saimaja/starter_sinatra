@@ -1,0 +1,7 @@
+<ul><% @applicants.each do |applicant|%>
+<li><a href="/applicants/<%=applicant.id%>"><%= applicant.name%></a></li>
+<%end%>
+</ul>
+
+<a href="/applicants/new">Create New Applicant</a>
+
